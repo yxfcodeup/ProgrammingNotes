@@ -1,29 +1,15 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+#以'#'开始的行，被视为注释
 
-# Precompiled Headers
-*.gch
-*.pch
+#忽略掉所有文件名是 foo.txt的文件
+#foo.txt
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+#忽略所有生成的 html文件
+#*.html
 
-# Fortran module files
-*.mod
-*.smod
+#foo.html是手工维护的，所以例外
+#!foo.html
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+#忽略所有.o和 .a文件
+#*.[oa]
 
-# Executables
-*.exe
-*.out
-*.app
+#------------------------------------------
