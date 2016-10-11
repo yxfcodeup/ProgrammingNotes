@@ -108,4 +108,8 @@ js.executeScript(“arguments[0].click();”,driver.findElement(By.id(“options
 * [Web爬虫：多线程、异步与动态代理初步](http://www.freebuf.com/articles/web/104732.html)
 * [模拟登陆一些知名的网站](https://github.com/xchaoinfo/fuck-login)
 * [怎样用Python设计一个爬虫模拟登陆知乎？](https://www.zhihu.com/question/29925879)
-* [简易爬虫](http://mp.weixin.qq.com/s?__biz=MzA3OTUxNDY2MA==&mid=2247483758&idx=1&sn=394a28df511ac0505291b0c519c43865&scene=1&srcid=0714qyKZ7YU1g5yOZBSwaU5K&from=groupmessage&isappinstalled=0#wechat_redirect)
+* [简易爬虫](http://mp.weixin.qq.com/s?__biz=MzA3OTUxNDY2MA==&mid=2247483758&idx=1&sn=394a28df511ac0505291b0c519c43865&scene=1&srcid=0714qyKZ7YU1g5yOZBSwaU5K&from=groupmessage&isappinstalled=0#wechat_redirect)  
+* [Python即时网络爬虫项目: 内容提取器的定义](https://segmentfault.com/a/1190000005344687)  
+* [python爬虫：dht磁力源代码开源](https://segmentfault.com/a/1190000006671235)  
+* [python爬虫爬取百度网盘-怎么做一个百度网盘搜索引擎](https://segmentfault.com/a/1190000005105528)  
+* 

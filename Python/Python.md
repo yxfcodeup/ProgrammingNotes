@@ -60,4 +60,8 @@ except:
 1. [http://www.lfd.uci.edu/~gohlke/pythonlibs/](http://www.lfd.uci.edu/~gohlke/pythonlibs/)
 
 ### 参考链接
-1. [https://segmentfault.com/a/1190000006872491](https://segmentfault.com/a/1190000006872491)
+1. [https://segmentfault.com/a/1190000006872491](https://segmentfault.com/a/1190000006872491)  
+2. [Python 调试方法](https://segmentfault.com/a/1190000005171685)  
+3. [python技巧](https://segmentfault.com/a/1190000006872491)  
+4. [Python 系统命令调用](https://segmentfault.com/a/1190000004853051)  
+5. [Python 全栈开发 -- 监控篇](https://segmentfault.com/a/1190000004368128)
