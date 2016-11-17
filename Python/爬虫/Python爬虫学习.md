@@ -88,7 +88,37 @@ JavascriptExecutor js = (JavascriptExecutor) driver;
 js.executeScript(“arguments[0].click();”,driver.findElement(By.id(“optionsLink”)));
 ```
 
-代码：  
+#### 常见问题  
+1. Selenium using Python - Geckodriver executable needs to be in PATH  
+```
+selenium.common.exceptions.WebDriverException: Message: 'geckodriver' executable needs to be in PATH.
+```  
+[First of all you will need to download latest executable geckodriver from here to run latest firefox using selenium](https://github.com/mozilla/geckodriver/releases)  
+Actually The Selenium client bindings tries to locate the geckodriver executable from the system PATH. You will need to add the directory containing the executable to the system path.  
+* On Unix systems you can do the following to append it to your system’s search path, if you’re using a bash-compatible shell:  
+```
+export PATH=$PATH:/path/to/directory/of/executable/downloaded/in/previous/step
+```  
+
+* On Windows you will need to update the Path system variable to add the full directory path to the executable geckodriver [manually](https://www.google.co.in/amp/www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/amp/?client=ms-android-motorola) or [command line](https://www.windows-commandline.com/set-path-command-line/) (don't forget to restart your system after adding executable geckodriver into system PATH to take effect). The principle is the same as on Unix.  
+
+Now you can run your code same as you're doing as below :  
+```
+from selenium import webdriver  
+browser = webdriver.Firefox() 
+```  
+
+```
+selenium.common.exceptions.WebDriverException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line  
+```
+
+Exception clearly states you have installed firefox some other location while Selenium is trying to find firefox and launch from default location but it couldn't find. You need to provide explicitly firefox installed binary location to launch firefox as below :  
+```
+from selenium import webdriver
+from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+binary = FirefoxBinary('path/to/installed firefox binary')
+browser = webdriver.Firefox(firefox_binary=binary)
+```
 
 
 #### 参考链接
@@ -112,4 +142,4 @@ js.executeScript(“arguments[0].click();”,driver.findElement(By.id(“options
 * [Python即时网络爬虫项目: 内容提取器的定义](https://segmentfault.com/a/1190000005344687)  
 * [python爬虫：dht磁力源代码开源](https://segmentfault.com/a/1190000006671235)  
 * [python爬虫爬取百度网盘-怎么做一个百度网盘搜索引擎](https://segmentfault.com/a/1190000005105528)  
-* 
+* [Selenium using Python - Geckodriver executable needs to be in PATH](http://stackoverflow.com/questions/40208051/selenium-using-python-geckodriver-executable-needs-to-be-in-path)
